@@ -1,0 +1,36 @@
+---
+import Card from '../components/Card.astro';
+import '../styles/global.css';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Masonry Layout Tailwind CSS</title>
+</head>
+<body class="bg-gray-100">
+	<h1 class="text-center text-5xl font-bold text-gray-500 pt-8 pb-10">
+		Masonry Layout
+	</h1>
+	
+	<div class="columns-4 gap-3 w-[1200px] mx-auto space-y-3 pb-28">
+		<div class="bg-gray-200 break-inside-avoid"><img src="../../public/img01.jpg" alt="">
+		</div>
+
+		<div class="bg-gray-200 break-inside-avoid"><img src="../../public/img02.jpg" alt="">
+		</div>
+
+		<div class="bg-gray-200 break-inside-avoid"><img src="../../public/img03.jpg" alt="">
+		</div>
+
+		<div class="bg-gray-200 break-inside-avoid"><img src="../../public/img01.jpg" alt="">
+		</div>
+	</div>
+
+	<Card />
+	
+
+</body>
+</html>
