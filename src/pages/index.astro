@@ -1,71 +1,71 @@
 ---
-import Card from '../components/Card.astro';
-import '../styles/global.css';
+import Card from "../components/Card.astro";
+import Navbar from "../components/Navbar.astro";
+import "../styles/global.css";
+
+const cards = [
+  {
+    title: "Articulo 01",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil dolorem quos atque necessitatibus assumenda ipsum, tenetur quis architecto molestiae voluptatibus, minima quia maxime asperiores consequuntur deleniti facilis eaque minus voluptate!",
+    image: "/img1.jpg",
+  },
+
+  {
+    title: "Articulo 02",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil dolorem quos atque necessitatibus assumenda ipsum, tenetur quis architecto molestiae voluptatibus, minima quia maxime asperiores consequuntur deleniti facilis eaque minus voluptate!",
+    image: "/img2.jpg",
+  },
+
+  {
+    title: "Articulo 03",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil dolorem quos atque necessitatibus assumenda ipsum, tenetur quis architecto molestiae voluptatibus, minima quia maxime asperiores consequuntur deleniti facilis eaque minus voluptate!",
+    image: "/img3.jpg",
+  },
+
+  {
+    title: "Articulo 04",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil dolorem quos atque necessitatibus assumenda ipsum, tenetur quis architecto molestiae voluptatibus, minima quia maxime asperiores consequuntur deleniti facilis eaque minus voluptate!",
+    image: "/img4.jpg",
+  },
+
+  {
+    title: "Articulo 05",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil dolorem quos atque necessitatibus assumenda ipsum, tenetur quis architecto molestiae voluptatibus, minima quia maxime asperiores consequuntur deleniti facilis eaque minus voluptate!",
+    image: "/img5.jpg",
+  },
+
+  {
+    title: "Articulo 06",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil dolorem quos atque necessitatibus assumenda ipsum, tenetur quis architecto molestiae voluptatibus, minima quia maxime asperiores consequuntur deleniti facilis eaque minus voluptate!",
+    image: "/img6.jpg",
+  },
+];
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Masonry Layout Tailwind CSS</title>
-</head>
-<body class="bg-gray-100">
-	<h1 class="text-center text-5xl font-bold text-gray-500 pt-8 pb-10">
-		Masonry Layout
-	</h1>
-	
-	<div class="columns-4 gap-3 w-[1200px] mx-auto space-y-3 pb-28">
-		<div class="bg-gray-200 break-inside-avoid">
-			<!-- <img src="../../public/img01.jpg" alt=""> -->
-			<Card />
-		</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Masonry Layout Tailwind CSS</title>
+  </head>
+  <body class="bg-gray-100">
+	<Navbar />
+	<img class="mx-auto pt-8 pb-10" src="/public/logo-lola.svg" alt="">
 
-		<div class="bg-gray-200 break-inside-avoid">
-			<!-- <img src="../../public/img01.jpg" alt=""> -->
-			<Card />
-		</div>
-		
-		<div class="bg-gray-200 break-inside-avoid">
-			<!-- <img src="../../public/img01.jpg" alt=""> -->
-			<Card />
-		</div>
+    <!-- <div class="columns-5 gap-3 w-auto mx-auto space-y-3 pb28-"> -->
+	 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
+		{cards.map((card) => (
+			<Card title={card.title} description={card.description} image={card.image} />
+		  ))}
+	 </div>
 
-		<div class="bg-gray-200 break-inside-avoid">
-			<!-- <img src="../../public/img01.jpg" alt=""> -->
-			<Card />
-		</div>
-
-		<div class="bg-gray-200 break-inside-avoid">
-			<!-- <img src="../../public/img01.jpg" alt=""> -->
-			<Card />
-		</div>
-		
-		<div class="bg-gray-200 break-inside-avoid">
-			<!-- <img src="../../public/img01.jpg" alt=""> -->
-			<Card />
-		</div>
-
-		<div class="bg-gray-200 break-inside-avoid">
-			<!-- <img src="../../public/img01.jpg" alt=""> -->
-			<Card />
-		</div>
-
-		<div class="bg-gray-200 break-inside-avoid">
-			<!-- <img src="../../public/img01.jpg" alt=""> -->
-			<Card />
-		</div>
-		
-		<div class="bg-gray-200 break-inside-avoid">
-			<!-- <img src="../../public/img01.jpg" alt=""> -->
-			<Card />
-		</div>
-
-		
-
-		
-
-	
-
-</body>
+	</div>
+  </body>
 </html>
